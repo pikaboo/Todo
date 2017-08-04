@@ -1,0 +1,20 @@
+PODS:
+  - Alamofire (4.5.0)
+  - AlamofireCoreData (1.0.0):
+    - Alamofire (~> 4.0)
+    - Groot (~> 2.0)
+  - Groot (2.0):
+    - Groot/Swift (= 2.0)
+  - Groot/Swift (2.0)
+
+DEPENDENCIES:
+  - AlamofireCoreData
+
+SPEC CHECKSUMS:
+  Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
+  AlamofireCoreData: 20618959493cf6bc804c39b538da21806365209b
+  Groot: 7543f84980bfb1613750818029d9b927d4378211
+
+PODFILE CHECKSUM: 1a360655a572e0b8cdcbd9ff50d31ad4cc04cc45
+
+COCOAPODS: 1.2.1
