@@ -22,8 +22,16 @@
 		84A238BF1F33B44900B1D3D5 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238BE1F33B44900B1D3D5 /* Client.swift */; };
 		84A238C11F33BAA300B1D3D5 /* ClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238C01F33BAA300B1D3D5 /* ClientTests.swift */; };
 		84A238CC1F33DE3200B1D3D5 /* ServerManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238CB1F33DE3200B1D3D5 /* ServerManagerTests.swift */; };
-		84A238CE1F344CBD00B1D3D5 /* TodoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238CD1F344CBD00B1D3D5 /* TodoItem.swift */; };
 		84A238D01F344F6E00B1D3D5 /* ClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238CF1F344F6E00B1D3D5 /* ClientProtocol.swift */; };
+		84A238DB1F35C05B00B1D3D5 /* TodoItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238D91F35C05B00B1D3D5 /* TodoItem+CoreDataClass.swift */; };
+		84A238DC1F35C05B00B1D3D5 /* TodoItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238DA1F35C05B00B1D3D5 /* TodoItem+CoreDataProperties.swift */; };
+		84A238E01F35C7CA00B1D3D5 /* CoreDataUnitTestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238DF1F35C7CA00B1D3D5 /* CoreDataUnitTestHelper.swift */; };
+		84A238E21F372E9400B1D3D5 /* CacheManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238E11F372E9400B1D3D5 /* CacheManagerTests.swift */; };
+		84A238E41F37488A00B1D3D5 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238E31F37488A00B1D3D5 /* MockApiClient.swift */; };
+		84A238E71F378DCD00B1D3D5 /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238E61F378DCD00B1D3D5 /* Storage.swift */; };
+		84A238E91F37A81400B1D3D5 /* RecordNetworkCalls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238E81F37A81400B1D3D5 /* RecordNetworkCalls.swift */; };
+		84A238EB1F37BFE600B1D3D5 /* NetworkCallStubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238EA1F37BFE600B1D3D5 /* NetworkCallStubs.swift */; };
+		84A238ED1F38910200B1D3D5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A238EC1F38910200B1D3D5 /* Extensions.swift */; };
 		C3C2A09B323A709C082FB99C /* Pods_ToDoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D20FA8FB209372E2CF00217D /* Pods_ToDoTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,8 +76,16 @@
 		84A238BE1F33B44900B1D3D5 /* Client.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		84A238C01F33BAA300B1D3D5 /* ClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientTests.swift; sourceTree = "<group>"; };
 		84A238CB1F33DE3200B1D3D5 /* ServerManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerManagerTests.swift; sourceTree = "<group>"; };
-		84A238CD1F344CBD00B1D3D5 /* TodoItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoItem.swift; sourceTree = "<group>"; };
 		84A238CF1F344F6E00B1D3D5 /* ClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClientProtocol.swift; sourceTree = "<group>"; };
+		84A238D91F35C05B00B1D3D5 /* TodoItem+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TodoItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		84A238DA1F35C05B00B1D3D5 /* TodoItem+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "TodoItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		84A238DF1F35C7CA00B1D3D5 /* CoreDataUnitTestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataUnitTestHelper.swift; sourceTree = "<group>"; };
+		84A238E11F372E9400B1D3D5 /* CacheManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheManagerTests.swift; sourceTree = "<group>"; };
+		84A238E31F37488A00B1D3D5 /* MockApiClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
+		84A238E61F378DCD00B1D3D5 /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
+		84A238E81F37A81400B1D3D5 /* RecordNetworkCalls.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordNetworkCalls.swift; sourceTree = "<group>"; };
+		84A238EA1F37BFE600B1D3D5 /* NetworkCallStubs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkCallStubs.swift; sourceTree = "<group>"; };
+		84A238EC1F38910200B1D3D5 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		B46776B6A6FE5E3D8CF38921 /* Pods-ToDo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ToDo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ToDo/Pods-ToDo.debug.xcconfig"; sourceTree = "<group>"; };
 		CC1D06C2F31AB53D78575D7A /* Pods_ToDoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D20FA8FB209372E2CF00217D /* Pods_ToDoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ToDoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +169,9 @@
 		84A238721F335A4700B1D3D5 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
+				84A238E51F378DAB00B1D3D5 /* Storage */,
+				84A238D91F35C05B00B1D3D5 /* TodoItem+CoreDataClass.swift */,
+				84A238DA1F35C05B00B1D3D5 /* TodoItem+CoreDataProperties.swift */,
 				84A238C21F33CB0F00B1D3D5 /* Server */,
 				84A238731F335A4700B1D3D5 /* AppDelegate.swift */,
 				84A238A51F338EF300B1D3D5 /* TodoItem.xcdatamodeld */,
@@ -161,8 +180,6 @@
 				84A2387A1F335A4800B1D3D5 /* Assets.xcassets */,
 				84A2387C1F335A4800B1D3D5 /* LaunchScreen.storyboard */,
 				84A2387F1F335A4800B1D3D5 /* Info.plist */,
-				84A238A81F3393D600B1D3D5 /* CacheManager.swift */,
-				84A238CD1F344CBD00B1D3D5 /* TodoItem.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -174,6 +191,12 @@
 				84A2388A1F335A4800B1D3D5 /* Info.plist */,
 				84A238C01F33BAA300B1D3D5 /* ClientTests.swift */,
 				84A238CB1F33DE3200B1D3D5 /* ServerManagerTests.swift */,
+				84A238DF1F35C7CA00B1D3D5 /* CoreDataUnitTestHelper.swift */,
+				84A238E11F372E9400B1D3D5 /* CacheManagerTests.swift */,
+				84A238E31F37488A00B1D3D5 /* MockApiClient.swift */,
+				84A238E81F37A81400B1D3D5 /* RecordNetworkCalls.swift */,
+				84A238EA1F37BFE600B1D3D5 /* NetworkCallStubs.swift */,
+				84A238EC1F38910200B1D3D5 /* Extensions.swift */,
 			);
 			path = ToDoTests;
 			sourceTree = "<group>";
@@ -195,6 +218,15 @@
 				84A238CF1F344F6E00B1D3D5 /* ClientProtocol.swift */,
 			);
 			name = Server;
+			sourceTree = "<group>";
+		};
+		84A238E51F378DAB00B1D3D5 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				84A238A81F3393D600B1D3D5 /* CacheManager.swift */,
+				84A238E61F378DCD00B1D3D5 /* Storage.swift */,
+			);
+			name = Storage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,13 +512,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A238D01F344F6E00B1D3D5 /* ClientProtocol.swift in Sources */,
-				84A238CE1F344CBD00B1D3D5 /* TodoItem.swift in Sources */,
 				84A238A41F33757300B1D3D5 /* ServerManager.swift in Sources */,
 				84A238A91F3393D600B1D3D5 /* CacheManager.swift in Sources */,
+				84A238DC1F35C05B00B1D3D5 /* TodoItem+CoreDataProperties.swift in Sources */,
 				84A238BF1F33B44900B1D3D5 /* Client.swift in Sources */,
 				84A238761F335A4700B1D3D5 /* ViewController.swift in Sources */,
+				84A238DB1F35C05B00B1D3D5 /* TodoItem+CoreDataClass.swift in Sources */,
 				84A238A71F338EF300B1D3D5 /* TodoItem.xcdatamodeld in Sources */,
 				84A238741F335A4700B1D3D5 /* AppDelegate.swift in Sources */,
+				84A238E71F378DCD00B1D3D5 /* Storage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,8 +528,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A238EB1F37BFE600B1D3D5 /* NetworkCallStubs.swift in Sources */,
+				84A238ED1F38910200B1D3D5 /* Extensions.swift in Sources */,
+				84A238E91F37A81400B1D3D5 /* RecordNetworkCalls.swift in Sources */,
 				84A238C11F33BAA300B1D3D5 /* ClientTests.swift in Sources */,
 				84A238CC1F33DE3200B1D3D5 /* ServerManagerTests.swift in Sources */,
+				84A238E01F35C7CA00B1D3D5 /* CoreDataUnitTestHelper.swift in Sources */,
+				84A238E41F37488A00B1D3D5 /* MockApiClient.swift in Sources */,
+				84A238E21F372E9400B1D3D5 /* CacheManagerTests.swift in Sources */,
 				84A238891F335A4800B1D3D5 /* ToDoTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

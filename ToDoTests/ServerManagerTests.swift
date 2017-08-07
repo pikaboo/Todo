@@ -8,20 +8,26 @@
 
 import XCTest
 import Foundation
+import CoreData
 @testable import ToDo
 @testable import Alamofire
+import OHHTTPStubs
 class ServerManagerTests: XCTestCase {
 
     var serverManager: ServerManager!
     var client : ClientProtocol = MockApiClient(baseURL:"MockApiClientBaseURL")
+    var managedObjectContext :NSManagedObjectContext!
+
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        self.managedObjectContext = CoreDataUnitTestHelper.setUpInMemoryManagedObjectContext()
         self.serverManager = ServerManager(client:self.client)
     }
     
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
+        OHHTTPStubs.removeAllStubs()
         super.tearDown()
     }
     
@@ -35,42 +41,67 @@ class ServerManagerTests: XCTestCase {
         
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testCreateItem(){
+        let todoItem = TodoItem(context:self.managedObjectContext, title:"Lena",completed:false, id:0)
+        let dataRequest : DataRequest = self.serverManager.createNewItem(item:todoItem)
+        let todoItemDict = todoItem.toDictionary()
+        
+        XCTAssertTrue(dataRequest.request?.httpMethod == "POST")
+        XCTAssertTrue((dataRequest.request?.url?.absoluteString.contains("/new"))!)
+        XCTAssertTrue(self.checkParametersAreEqual(dataRequest: dataRequest, expectedParameters: todoItemDict))
+      
+ 
+        
+    }
+    
+    func testUpdateItem(){
+        let itemId = 10
+        let todoItem = TodoItem(context:self.managedObjectContext, title:"Lena",completed:false, id:Int32(itemId))
+        let dataRequest : DataRequest = self.serverManager.updateItem(item:todoItem)
+        let todoItemDict = todoItem.toDictionary()
+        
+        XCTAssertTrue(dataRequest.request?.httpMethod == "PUT")
+        XCTAssertTrue((dataRequest.request?.url?.absoluteString.contains("/update/\(itemId)"))!)
+        XCTAssertTrue(self.checkParametersAreEqual(dataRequest: dataRequest, expectedParameters: todoItemDict))
+    }
+    
+    
+    func testDeleteItem(){
+        let itemId = 10
+
+        let dataRequest : DataRequest = self.serverManager.deleteItem(itemId:Int32(itemId))
+        
+        XCTAssertTrue(dataRequest.request?.httpMethod == "DELETE")
+        XCTAssertTrue((dataRequest.request?.url?.absoluteString.contains("/delete/\(itemId)"))!)
+    }
+    
+    func checkParametersAreEqual(dataRequest:DataRequest, expectedParameters:[String:AnyObject]) -> Bool {
+        
+        
+        let parametersInRequest = String(data:(dataRequest.request?.httpBody)!, encoding:.utf8)
+        
+        
+        for (key,value) in expectedParameters {
+            if( !(parametersInRequest?.contains("\(key)=\(value)"))!){
+                return false
+            }
         }
+        
+        return true
     }
     
 
 }
 
-class MockApiClient : ClientProtocol {
-    var result : DataResponse<Any>!
-    var baseURL : String! = "MockApiClientBaseURL"
-    
-    required init(baseURL: String!){
-        self.baseURL = baseURL
-    }
-    public func path(_ urlPath: String!)->String!{
-        return "\(self.baseURL!)/\(urlPath!)"
-    }
-    
-    func makeRequest(method:HTTPMethod,path:String!)->DataRequest {
-        return makeRequest(method: method, path: path, parameters: ["" : "" as AnyObject])
-    }
-    
-     func makeRequest(method: HTTPMethod, path: String!, parameters: [String : AnyObject]?) -> DataRequest {
-        
-        var request = try?  URLRequest(url: URL(string:self.path(path))!, method: HTTPMethod(rawValue: method.rawValue)!)
-        request?.httpBody =  NSKeyedArchiver.archivedData(withRootObject: parameters!)
-         let originalTask = DataRequest.Requestable(urlRequest: request!)
-        let requestTask  = Request.RequestTask.data(originalTask,nil)
-        
-        let session : URLSession = URLSession()
-            let resultingRequest = DataRequest(session: session, requestTask: requestTask, error: nil)
-        
-
-        return resultingRequest
+extension TodoItem {
+    convenience init(context:NSManagedObjectContext ,title:String!, completed:Bool! = false, id:Int32 = 0){
+        let entity = NSEntityDescription.entity(forEntityName:"TodoItem", in:context)
+        self.init(entity: entity!, insertInto: context)
+        self.title = title
+        self.completed = completed
+        self.id = id
     }
 }
+
+
+

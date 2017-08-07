@@ -13,6 +13,7 @@ target 'ToDo' do
   target 'ToDoTests' do
     inherit! :search_paths
     pod 'AlamofireCoreData'
+    pod 'OHHTTPStubs/Swift'
   end
 
   target 'ToDoUITests' do

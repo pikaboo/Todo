@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ToDo/TodoItem+CoreDataClass.swift">
-   </FileRef>
-   <FileRef
-      location = "group:ToDo/TodoItem+CoreDataProperties.swift">
-   </FileRef>
-   <FileRef
       location = "group:ToDo.xcodeproj">
    </FileRef>
    <FileRef

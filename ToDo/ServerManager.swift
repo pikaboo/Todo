@@ -19,7 +19,8 @@ public class ServerManager: NSObject {
         self.apiClient = Client(baseURL: self.baseURL)
     }
     
-    public init (client: ClientProtocol){
+    public convenience init (client: ClientProtocol){
+        self.init()
         self.apiClient = client
     }
     
@@ -34,11 +35,11 @@ public class ServerManager: NSObject {
     
     public func updateItem(item: TodoItem) ->DataRequest {
         let dict = item.toDictionary()
-        return self.apiClient.makeRequest(method:.post,path:"update/\(item.id)",parameters:dict)
+        return self.apiClient.makeRequest(method:.put,path:"update/\(item.id)",parameters:dict)
     }
     public func deleteItem(itemId: Int32) ->DataRequest {
         
-        return self.apiClient.makeRequest(method:.post,path:"update/\(itemId)")
+        return self.apiClient.makeRequest(method:.delete,path:"delete/\(itemId)")
     }
 }
 

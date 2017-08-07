@@ -6,15 +6,30 @@ PODS:
   - Groot (2.0):
     - Groot/Swift (= 2.0)
   - Groot/Swift (2.0)
+  - OHHTTPStubs/Core (6.0.0)
+  - OHHTTPStubs/Default (6.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (6.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (6.0.0)
+  - OHHTTPStubs/Swift (6.0.0):
+    - OHHTTPStubs/Default
 
 DEPENDENCIES:
   - AlamofireCoreData
+  - OHHTTPStubs/Swift
 
 SPEC CHECKSUMS:
   Alamofire: f28cdffd29de33a7bfa022cbd63ae95a27fae140
   AlamofireCoreData: 20618959493cf6bc804c39b538da21806365209b
   Groot: 7543f84980bfb1613750818029d9b927d4378211
+  OHHTTPStubs: 752f9b11fd810a15162d50f11c06ff94f8e012eb
 
-PODFILE CHECKSUM: 1a360655a572e0b8cdcbd9ff50d31ad4cc04cc45
+PODFILE CHECKSUM: 3dc3945e75e28a6e594d5099577307030332960d
 
 COCOAPODS: 1.2.1

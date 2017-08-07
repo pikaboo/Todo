@@ -2,7 +2,7 @@
 //  TodoItem+CoreDataClass.swift
 //  
 //
-//  Created by admin on 8/3/17.
+//  Created by admin on 8/5/17.
 //
 //
 
@@ -11,5 +11,5 @@ import CoreData
 
 @objc(TodoItem)
 public class TodoItem: NSManagedObject {
-   
+
 }

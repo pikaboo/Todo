@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>OHHTTPStubs.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ToDo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,7 +42,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1C9F15EBECEEBE7F6E4C6E23C1F14040</key>
+		<key>0E38C9368D9D433A22BCA8754EDB6F9C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>748F1C7F61D88F3FB355A8E829489671</key>
 		<dict>
 			<key>primary</key>
 			<true/>
