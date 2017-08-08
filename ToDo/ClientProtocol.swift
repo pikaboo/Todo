@@ -2,8 +2,8 @@
 //  ClientProtocol.swift
 //  ToDo
 //
-//  Created by admin on 8/3/17.
-//  Copyright © 2017 admin. All rights reserved.
+//  Created by Lena on 8/3/17.
+//  Copyright © 2017 Lena. All rights reserved.
 //
 
 import UIKit
@@ -18,5 +18,6 @@ public protocol ClientProtocol{
     
      func makeRequest(method:HTTPMethod,path:String!)->DataRequest
     
-     func makeRequest(method:HTTPMethod,path:String!,parameters:[String:AnyObject]?) ->DataRequest
+     func makeRequest(method:HTTPMethod,path:String!,parameters:[String:Any]?) ->DataRequest
 }
+

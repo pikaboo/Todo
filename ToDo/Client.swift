@@ -2,8 +2,8 @@
 //  Client.swift
 //  ToDo
 //
-//  Created by admin on 8/3/17.
-//  Copyright © 2017 admin. All rights reserved.
+//  Created by Lena on 8/3/17.
+//  Copyright © 2017 Lena. All rights reserved.
 //
 
 import UIKit
@@ -26,7 +26,23 @@ public class Client: NSObject, ClientProtocol {
         return makeRequest(method:method,path:path,parameters:nil)
     }
     
-    public func makeRequest(method:HTTPMethod,path:String!,parameters:[String:AnyObject]? = ["":"" as AnyObject]) ->DataRequest{
-        return Alamofire.request(self.path(path), method:method, parameters:parameters, headers: nil)
+    public func makeRequest(method:HTTPMethod,path:String!,parameters:[String:Any]? = ["":""]) ->DataRequest{
+        let url = self.path(path)!
+        
+        var params : [String: Any] = ["":""]
+        if parameters != nil {
+            params = parameters!
+        }
+        print("sending  request to url:\(url) method: \(method) parameters:\(String(describing: params))")
+        var encoding : ParameterEncoding =  JSONEncoding.default
+        
+        if method == .get {
+            encoding = URLEncoding.default
+        }
+        let dataRequest :DataRequest = Alamofire.request(url, method:method,parameters:params,encoding:encoding,  headers: nil)
+        
+        return dataRequest
     }
+    
+    
 }

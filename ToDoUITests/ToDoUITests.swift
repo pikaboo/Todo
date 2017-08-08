@@ -2,8 +2,8 @@
 //  ToDoUITests.swift
 //  ToDoUITests
 //
-//  Created by admin on 8/3/17.
-//  Copyright © 2017 admin. All rights reserved.
+//  Created by Lena on 8/3/17.
+//  Copyright © 2017 Lena. All rights reserved.
 //
 
 import XCTest

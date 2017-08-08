@@ -2,8 +2,8 @@
 //  MockApiClient.swift
 //  ToDo
 //
-//  Created by admin on 8/6/17.
-//  Copyright © 2017 admin. All rights reserved.
+//  Created by Lena on 8/6/17.
+//  Copyright © 2017 Lena. All rights reserved.
 //
 
 import UIKit
@@ -21,16 +21,20 @@ class MockApiClient : ClientProtocol {
     }
     
     func makeRequest(method:HTTPMethod,path:String!)->DataRequest {
-        return makeRequest(method: method, path: path, parameters: ["" : "" as AnyObject])
+        return makeRequest(method: method, path: path, parameters: ["" : "" as Any])
     }
     
-    func makeRequest(method: HTTPMethod, path: String!, parameters: [String : AnyObject]?) -> DataRequest {
+    func makeRequest(method: HTTPMethod, path: String!, parameters: [String : Any]?) -> DataRequest {
         
 
         let stubs = NetworkCallStubs(host:self.baseURL)
         stubs.stubRequests(path: path, responseObject: ["":""])
+        var encoding =  JSONEncoding.default
         
-        return Alamofire.request(self.path(path), method: method, parameters: parameters, headers: nil)
+        if method == .get {
+            encoding = JSONEncoding.default
+        }
+        return Alamofire.request(self.path(path), method: method,parameters: parameters,encoding:encoding,  headers: nil)
     }
     
 

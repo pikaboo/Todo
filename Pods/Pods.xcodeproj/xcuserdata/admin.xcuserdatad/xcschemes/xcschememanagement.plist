@@ -9,16 +9,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>AlamofireCoreData.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Groot.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>OHHTTPStubs.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,7 +32,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E38C9368D9D433A22BCA8754EDB6F9C</key>
+		<key>54690FA0DB6CA19447227073DBB33307</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -62,17 +52,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C08680ECA428890526D8FE05049DD4D6</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>CA5C02401935542EE4C7003D3A4B5B47</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>F78105E85C2D3A022A9660F5BD1A0FB1</key>
+		<key>A622F1DF968039EAD984851FAA96AD7B</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -6,13 +6,12 @@ target 'ToDo' do
   use_frameworks!
 
   # Pods for ToDo
-  #https://github.com/manueGE/AlamofireCoreData
-  #AlamofireCoreData is available under the MIT license.
-    pod 'AlamofireCoreData'
+
+    pod 'Alamofire'
     
   target 'ToDoTests' do
     inherit! :search_paths
-    pod 'AlamofireCoreData'
+    pod 'Alamofire'
     pod 'OHHTTPStubs/Swift'
   end
 

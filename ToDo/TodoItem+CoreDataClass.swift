@@ -2,7 +2,7 @@
 //  TodoItem+CoreDataClass.swift
 //  
 //
-//  Created by admin on 8/5/17.
+//  Created by Lena on 8/5/17.
 //
 //
 

@@ -2,8 +2,8 @@
 //  NetworkCallStubs.swift
 //  ToDo
 //
-//  Created by admin on 8/6/17.
-//  Copyright © 2017 admin. All rights reserved.
+//  Created by Lena on 8/6/17.
+//  Copyright © 2017 Lena. All rights reserved.
 //
 
 import UIKit
@@ -18,11 +18,7 @@ class NetworkCallStubs: NSObject {
         self.host = host
     }
     
-    let emptyTodoList : [[String:AnyObject]] = []
-    let oneItemTodo :[String: Any] = ["title":"one" ,"completed":false, "id":1]
-    let oneItemTodoList :[[String:Any]] = [["title":"one" ,"completed":false, "id":1]]
-    let severalItemTodoList : [[String:Any]] = [["title":"item1","completed":false,"id":1], ["title":"item2","completed":true,"id":2]]
-    
+  
     func stubRequests(path:String!, responseObjectArray:[[String:Any]]){
         stub(condition: isHost(self.host) && isPath(path)) {
             _ in

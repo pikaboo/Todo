@@ -56,7 +56,7 @@ struct Storage {
     
     @available(iOS 10.0, *)
     private lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "Model")
+        let container = NSPersistentContainer(name: "TodoItem")
         container.loadPersistentStores { (storeDescription, error) in
             print("CoreData: Inited \(storeDescription)")
             guard error == nil else {
@@ -69,7 +69,7 @@ struct Storage {
     
     private lazy var persistentStoreCoordinator: NSPersistentStoreCoordinator? = {
         do {
-            return try NSPersistentStoreCoordinator.coordinator(name: "Model")
+            return try NSPersistentStoreCoordinator.coordinator(name: "TodoItem")
         } catch {
             print("CoreData: Unresolved error \(error)")
         }

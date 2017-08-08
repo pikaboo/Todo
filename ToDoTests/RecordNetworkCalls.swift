@@ -2,13 +2,12 @@
 //  RecordNetworkCalls.swift
 //  ToDo
 //
-//  Created by admin on 8/6/17.
-//  Copyright © 2017 admin. All rights reserved.
+//  Created by Lena on 8/6/17.
+//  Copyright © 2017 Lena. All rights reserved.
 //
 
 import XCTest
 @testable import ToDo
-@testable import AlamofireCoreData
 @testable import Alamofire
 import CoreData
 import OHHTTPStubs
@@ -28,20 +27,11 @@ class RecordNetworkCalls: XCTestCase {
     }
     
     func testExample() {
-//        let configuration = URLSessionConfiguration.default
-//        configuration.httpAdditionalHeaders = ["":""]
-//        
-//        if let sharedRecorder = SWHttpTrafficRecorder.sharedRecorder() {
-//            sharedRecorder.recordingFormat = SWHTTPTrafficRecordingFormat.BodyOnly
-//            
-//            sharedRecorder.startRecording(atPath:"responses",forSessionConfiguration:configuration)
-//        }
-//        
-//        
-//        
-        let serverManager :ServerManager = ServerManager()
+
+        let apiClient = Client(baseURL: "http://ec2-52-32-105-2.us-west-2.compute.amazonaws.com:8080")
+        let serverManager :ServerManager = ServerManager(client:apiClient)
         let stubs = NetworkCallStubs(host:"ec2-52-32-105-2.us-west-2.compute.amazonaws.com")
-        stubs.stubRequests(path: "/all", responseObjectArray: stubs.severalItemTodoList)
+        stubs.stubRequests(path: "/all", responseObjectArray: ObjectStubs.shared.severalItemTodoList)
         let expect = expectation(description: "wait for requests to load")
         
         
